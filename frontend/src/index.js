@@ -5,7 +5,9 @@ import App from "./App";
 import axios from "axios";
 
 const baseUrl =
-  process.env.NODE_ENV === "development" ? "http://localhost:8001" : "";
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8001"
+    : "https://insta-shots-nu.vercel.app/";
 
 axios.defaults.baseURL = baseUrl;
 
