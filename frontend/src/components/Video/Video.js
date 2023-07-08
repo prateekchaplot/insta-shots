@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import "./Video.css";
-import VideoFooter from "../VideoFooter/VideoFooter";
+import Footer from "../Footer/Footer";
 
 const Video = () => {
   const [playing, setPlaying] = useState(false);
@@ -24,7 +24,7 @@ const Video = () => {
         ref={videoRef}
         onClick={handleVideoPress}
       />
-      <VideoFooter />
+      <Footer />
     </div>
   );
 };
