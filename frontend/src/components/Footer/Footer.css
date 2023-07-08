@@ -3,7 +3,8 @@
   color: white;
   bottom: 125px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 20px;
 }
 .footer__text > h3 {
   margin: 0 0 8px 0;
