@@ -1,9 +1,13 @@
 import "./App.css";
+import Video from "./components/Video/Video";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Insta Shots</h1>
+    <div className="app">
+      <div className="app__videos">
+        <Video />
+        <Video />
+      </div>
     </div>
   );
 }
