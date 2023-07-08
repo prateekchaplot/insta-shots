@@ -4,7 +4,7 @@ import { useState } from "react";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import { useSpring, animated } from "react-spring";
 
-const Footer = () => {
+const Footer = ({ channel, description, song }) => {
   const [key, setKey] = useState(1);
   const scrolling = useSpring({
     from: { transform: "translate(55%,0)" },
@@ -19,12 +19,12 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__text">
-        <h3>@nabendu82</h3>
-        <p>Macbook Air to new Windows editing beast</p>
+        <h3>@{channel}</h3>
+        <p>{description}</p>
         <div className="footer__ticker">
           <MusicNoteIcon className="footer__icon" />
           <div className="footer__scrollText">
-            <animated.div style={scrolling}>I am Windows PC</animated.div>
+            <animated.div style={scrolling}>{song}</animated.div>
           </div>
         </div>
       </div>

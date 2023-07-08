@@ -5,7 +5,7 @@ import MessageIcon from "@mui/icons-material/Message";
 import ShareIcon from "@mui/icons-material/Share";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ likes, shares, messages }) => {
   const [liked, setLiked] = useState(false);
 
   return (
@@ -16,17 +16,17 @@ const Sidebar = () => {
         ) : (
           <FavoriteBorderIcon onClick={() => setLiked(true)} fontSize="large" />
         )}
-        <p>{liked ? 101 : 100}</p>
+        <p>{liked ? likes + 1 : likes}</p>
       </div>
 
       <div className="sidebar__button">
         <MessageIcon fontSize="large" />
-        <p>345</p>
+        <p>{messages}</p>
       </div>
 
       <div className="sidebar__button">
         <ShareIcon fontSize="large" />
-        <p>109</p>
+        <p>{shares}</p>
       </div>
     </div>
   );
